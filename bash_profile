@@ -10,16 +10,10 @@ alias ...='cd ../..'
 alias diff='colordiff'
 
 # http://it.toolbox.com/blogs/lim/how-to-fix-colors-on-mac-osx-terminal-37214
+set t_Co=256
 export CLICOLOR="xterm-color"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
-
 export PS1='\n\[\e[1;32m\][\u@mac] \[\e[1;36m\]\w \n\[\e[0;32m\]\$ \[\e[0m\]'
-
-set t_Co=256
-#set -o vi
-
-# Auto complete ssh server defined in ~/.ssh/config
-#complete -W "$(awk '/^Host/{if ($2!="*") print $2}' ~/.ssh/config)" ssh
 
 # Define ssh alias for server defined in ~/.ssh/config
 for host in $(awk '/^Host/{if ($2!="*") print $2}' ~/.ssh/config); do
