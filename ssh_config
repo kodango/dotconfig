@@ -1,26 +1,6 @@
 Host *
     ServerAliveInterval 60
 
-Host login1.cm4
-    HostName login1.cm4.taobao.org
-    User tuantuan.lv
-
-Host login1.cm3
-    HostName login1.cm3.taobao.org
-    User tuantuan.lv
-
-Host login1.cm5
-    HostName login1.cm5.taobao.org
-    User tuantuan.lv
-
-Host houyi-dev
-    HostName 10.250.6.27 
-    User admin
-
-Host wiki
-    HostName ops.ecs.alibaba-inc.com
-    User root
-
-Host mkimage
-    HostName ecmkimage.aliyun-inc.com
-    User admin
+Host test
+    HostName example.com
+    User test
