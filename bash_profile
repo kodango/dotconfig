@@ -34,5 +34,5 @@ done
 #
 export PS1='\n\[\e[0;36m\][\u@mac] \[\e[0;34m\]\w \n\[\e[0;36m\]\$ \[\e[0m\]'
 export EDITOR='vim'
-export PATH=/usr/local/bin:$PATH
-export GOPATH=/Users/kodango/Documents/Github/mygo
+export GOPATH=$HOME/Github/mygo
+export PATH=${GOPATH//://bin:}/bin:/usr/local/bin:$PATH
