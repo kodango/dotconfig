@@ -1,7 +1,8 @@
 #
 # Kodango's ~/.bash_profile
 # 
-# Version: 1.0
+# Version: 1.0.1
+# Last Modified: 2014-04-11
 #
 
 # Source the bashrc file too
@@ -11,6 +12,20 @@ fi
 
 # Source mark-directory tool config
 [ -f "$HOME/.markrc" ] && source $HOME/.markrc
+
+# Define useful functions
+
+function encrypt()
+{
+    openssl des3 -salt -in "$1" -out "$1.des3"
+    rm -f "$1"
+}
+
+function decrypt()
+{
+    openssl des3 -d -salt -in "$1" -out "${1/.des3/}"
+    rm -f "$1"
+}
 
 #
 # Define aliases
