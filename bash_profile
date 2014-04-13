@@ -24,7 +24,7 @@ function encrypt()
 function decrypt()
 {
     openssl des3 -d -salt -in "$1" -out "${1/.des3/}"
-    rm -f "$1"
+#    rm -f "$1"
 }
 
 #
