@@ -1,8 +1,8 @@
 #
 # Kodango's ~/.bash_profile
-# 
-# Version: 1.0.1
-# Last Modified: 2014-04-11
+#
+# Version: 1.0.2
+# Last Modified: 2017-06-20
 #
 
 # Source the bashrc file too
@@ -49,4 +49,5 @@ done
 #
 export PS1='\n\[\e[0;36m\]\u -> \[\e[0;34m\]\w \n\[\e[0;36m\]\$ \[\e[0m\]'
 export EDITOR='vim'
-export PATH=/usr/local/bin:$PATH
+export GOPATH=$HOME/Workspace/go
+export PATH=$GOPATH/bin:/usr/local/bin:$PATH
