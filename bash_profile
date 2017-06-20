@@ -1,8 +1,8 @@
 #
 # Kodango's ~/.bash_profile
 #
-# Version: 1.0.2
-# Last Modified: 2017-06-20
+# Version: 1.0.1
+# Last Modified: 2014-04-11
 #
 
 # Source the bashrc file too
@@ -40,9 +40,11 @@ if which colordiff &>/dev/null; then
 fi
 
 # Define ssh connection aliases for servers defined in ~/.ssh/config
-for host in $(awk '/^Host/{if ($2!="*") print $2}' $HOME/.ssh/config); do
-    alias $host="ssh $host"
-done
+if [ -f "$HOME/.ssh/config" ]; then
+    for host in $(awk '/^Host/{if ($2!="*") print $2}' $HOME/.ssh/config); do
+        alias $host="ssh $host"
+    done
+fi
 
 #
 # Define environment variables
