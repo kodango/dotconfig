@@ -53,7 +53,3 @@ export PS1='\n\[\e[0;36m\]\u -> \[\e[0;34m\]\w \n\[\e[0;36m\]\$ \[\e[0m\]'
 export EDITOR='vim'
 export GOPATH=$HOME/Workspace/go
 export PATH=$GOPATH/bin:/usr/local/bin:$PATH
-
-# Replace Homebrew Bottles source
-# https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles

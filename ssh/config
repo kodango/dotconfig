@@ -3,7 +3,6 @@ Host *
     ControlMaster auto
     ControlPath ~/.ssh/%h-%p-%r
     ControlPersist yes
-
-Host test
-    HostName example.com
-    User test
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
